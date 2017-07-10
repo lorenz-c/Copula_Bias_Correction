@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="44"
+   name=""
+   committed-date="2006-12-13T01:06:54.824309Z"
+   url="https://copula.googlecode.com/svn/trunk/tests"
+   last-author="david.huard"
+   kind="dir"
+   uuid="02639219-ab21-0410-aed8-758928e7e07a"
+   repos="https://copula.googlecode.com/svn"
+   revision="47"/>
+<entry
+   committed-rev="38"
+   name="test_check_tau.m"
+   text-time="2006-12-11T14:20:26.000000Z"
+   committed-date="2006-11-24T03:32:05.753759Z"
+   checksum="0e40453d6cdd294840a96ca4bc12ffb3"
+   last-author="david.huard"
+   kind="file"
+   prop-time="2006-12-11T14:20:24.000000Z"/>
+<entry
+   committed-rev="40"
+   name="test_posterior.m"
+   text-time="2006-12-11T14:20:26.000000Z"
+   committed-date="2006-11-27T02:06:17.239253Z"
+   checksum="5868bab65394dc7151f0d4d9d96d65f6"
+   last-author="david.huard"
+   kind="file"
+   prop-time="2006-12-11T14:20:24.000000Z"/>
+<entry
+   committed-rev="44"
+   name="test_copularnd.m"
+   text-time="2007-02-12T19:38:13.000000Z"
+   committed-date="2006-12-13T01:06:54.824309Z"
+   checksum="7a44f674c3ab3cd0cba09aa19be6860d"
+   last-author="david.huard"
+   kind="file"
+   prop-time="2007-02-12T19:38:13.000000Z"/>
+<entry
+   committed-rev="40"
+   name="TestSuite.m"
+   text-time="2006-12-11T14:20:26.000000Z"
+   committed-date="2006-11-27T02:06:17.239253Z"
+   checksum="f377130f8dfc465138d7dcdb584b17ab"
+   last-author="david.huard"
+   kind="file"
+   prop-time="2006-12-11T14:20:24.000000Z"/>
+<entry
+   committed-rev="20"
+   name="volume.txt"
+   text-time="2006-11-09T20:46:17.000000Z"
+   committed-date="2006-11-09T21:32:23.330077Z"
+   checksum="95a41a8ab338538dcf1a3a9d73c5ec58"
+   last-author="david.huard"
+   kind="file"/>
+<entry
+   committed-rev="34"
+   name="example.m"
+   text-time="2006-11-23T16:15:04.000000Z"
+   committed-date="2006-11-23T02:35:40.996973Z"
+   checksum="fa50d8d5b315faed31c63a60caca04d6"
+   last-author="david.huard"
+   kind="file"
+   prop-time="2006-11-23T16:15:04.000000Z"/>
+<entry
+   committed-rev="38"
+   name="test_copulacdf.m"
+   text-time="2006-12-11T14:20:26.000000Z"
+   committed-date="2006-11-24T03:32:05.753759Z"
+   checksum="a80bb2d77dfad17edc6f3ccb95a0cd26"
+   last-author="david.huard"
+   kind="file"
+   prop-time="2006-12-11T14:20:24.000000Z"/>
+<entry
+   committed-rev="38"
+   name="tau_jacobian2.m"
+   text-time="2006-12-11T14:20:26.000000Z"
+   committed-date="2006-11-24T03:32:05.753759Z"
+   checksum="b05cead426b12fb80ad5e7474b6871b1"
+   last-author="david.huard"
+   kind="file"
+   prop-time="2006-12-11T14:20:24.000000Z"/>
+<entry
+   committed-rev="38"
+   name="test_copulaparam.m"
+   text-time="2006-12-11T14:20:26.000000Z"
+   committed-date="2006-11-24T03:32:05.753759Z"
+   checksum="4cff5b8d1fe90d32b0b62a8adde33290"
+   last-author="david.huard"
+   kind="file"
+   prop-time="2006-12-11T14:20:25.000000Z"/>
+<entry
+   committed-rev="44"
+   name="test_bcs.m"
+   text-time="2007-02-12T19:38:13.000000Z"
+   committed-date="2006-12-13T01:06:54.824309Z"
+   checksum="f4674abb9eb569d74ed01b120bddb876"
+   last-author="david.huard"
+   kind="file"
+   prop-time="2007-02-12T19:38:13.000000Z"/>
+<entry
+   committed-rev="40"
+   name="test_copularnd2.m"
+   text-time="2006-12-11T14:20:26.000000Z"
+   committed-date="2006-11-27T02:06:17.239253Z"
+   checksum="158ddf992d37d7762796dda8bb7f6881"
+   last-author="david.huard"
+   kind="file"
+   prop-time="2006-12-11T14:20:25.000000Z"/>
+<entry
+   committed-rev="43"
+   name="test_copulapdf.m"
+   text-time="2006-12-11T14:20:26.000000Z"
+   committed-date="2006-12-06T03:34:24.297194Z"
+   checksum="ea84c3d10cbe99a073c7f47c57065975"
+   last-author="david.huard"
+   kind="file"
+   prop-time="2006-12-11T14:20:25.000000Z"/>
+<entry
+   committed-rev="27"
+   name="discharge.txt"
+   text-time="2006-11-13T21:37:24.000000Z"
+   committed-date="2006-11-13T04:15:10.759177Z"
+   checksum="11062dd61d8e393fdc797b63609a7f8f"
+   last-author="david.huard"
+   kind="file"
+   prop-time="2006-11-13T21:37:24.000000Z"/>
+<entry
+   committed-rev="38"
+   name="test_copulastat.m"
+   text-time="2006-12-11T14:20:26.000000Z"
+   committed-date="2006-11-24T03:32:05.753759Z"
+   checksum="4937d74f72667099bc07d15186dc474e"
+   last-author="david.huard"
+   kind="file"
+   prop-time="2006-12-11T14:20:25.000000Z"/>
+<entry
+   committed-rev="43"
+   name="test_taujacobian.m"
+   text-time="2006-12-11T14:20:26.000000Z"
+   committed-date="2006-12-06T03:34:24.297194Z"
+   checksum="122729a8f2ad135260b47aecc87d4e25"
+   last-author="david.huard"
+   kind="file"
+   prop-time="2006-12-11T14:20:26.000000Z"/>
+<entry
+   committed-rev="38"
+   name="test_check_alpha.m"
+   text-time="2006-12-11T14:20:26.000000Z"
+   committed-date="2006-11-24T03:32:05.753759Z"
+   checksum="5a371e063baaf3afbf78098a4e8c27f7"
+   last-author="david.huard"
+   kind="file"
+   prop-time="2006-12-11T14:20:26.000000Z"/>
+</wc-entries>
