@@ -3,6 +3,8 @@ function [Fxp, Fx, X, varargout] = cdf_transform(x, x_p, est_method, inverse, va
 if nargin < 4, inverse = 0; end
 if nargin < 3, est_method = 'ecdf'; end
 
+warning('off', 'all');
+
 if inverse == 0
     if strcmp(est_method, 'ksd')
         Fxp = ksdensity(x, x_p, 'function', 'cdf', 'support', 'positive');

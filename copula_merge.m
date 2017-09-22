@@ -9,7 +9,7 @@ if nargin < 4
     settings.condvals  = 500;
     settings.nsamples  = 500;
     settings.paramest  = 'tau';
-    settings.checkAC   = 0;
+    settings.checkAC   = false;
     settings.copulaest = 'selected';
     settings.removenan = 1;
     settings.copout    = 'maxp';
@@ -90,10 +90,17 @@ else
     [s, s_tmp, y_tmp]       = cdf_transform(y_old, y, settings.cdf_est);
 end
 
-                                                  
+% Check for 0 and 1 in the transformed data
+r_p(r_p == 0) = 1e-16;
+r(r == 0)     = 1e-16;
+s(s == 0)     = 1e-16;
+
+r_p(r_p == 1) = 1 - 1e-16;
+r(r == 1)     = 1 - 1e-16;
+s(s == 1)     = 1 - 1e-16;
+
 %% ------------------- CHECK FOR ANTI-CORRELATION -------------------------
-if settings.checkAC == 1
-    
+if settings.checkAC == true
     CC = corr(r, s, 'type', 'Kendall');
     
     if CC < 0
@@ -103,8 +110,6 @@ if settings.checkAC == 1
     else
         AC = false;
     end
-    disp(['Check for anti-correlation... AC = ', ...
-                                   num2str(AC), '; Theta = ', num2str(CC)])
 end
 
 %% ------------------------------------------------------------------------
@@ -135,40 +140,11 @@ sel_family = families{id};
 %  ------------------------------------------------------------------------
 % The Copula-parameter can be estimated via Canonical Maximum Likelihood
 % (default) and through Kendall's tau
-% if strcmp(settings.paramest, 'cml')
-%     for i = 1:length(families)
-%         %theta_rl(i, 1) = CML(families{i}, r, s, 1);
-%         theta_rl(i, 1) = CML(sel_family, r, s, 1);
-%     end
-% elseif strcmp(settings.paramest, 'tau')
-%     % Compute Kendall's tau between r and s
-%     for i = 1:length(families)
-%         %theta_rl(i, 1) = copulaparam(families{i}, tau);
-%         theta_rl(i, 1) = copulaparam(sel_family, tau);
-%     end
-% end
 if strcmp(settings.paramest, 'cml')
     theta_rl = CML(sel_family, r, s, 1);
 elseif strcmp(settings.paramest, 'tau')
     theta_rl = copulaparam(sel_family, tau);
 end
-
-
-%% ------------------------------------------------------------------------
-%                          GOODNESS-OF-FIT-TEST (old method)
-%  ------------------------------------------------------------------------
-% % 1. Compute the empirical Copula 
-% [C_n, P_n, u, v] = empcopula(r, s);
-% 
-% % 2. Create a grid for evaluating the theoretical Copulas
-% [U, V] = meshgrid(u, v);
-% 
-% for i = 1:length(settings.copnms)
-% %     3. Compute the theoretical Copulas using the estimated parameter
-%     C{i} = copula_cdf(settings.copnms{i}, U, V, theta_rl(i));
-% %     4. Compute the RMSE between the empirical and fitted Copula
-%     RMSE(1, i) = rms(C_n(:) - C{i}(:));
-% end
 
 
 %% ------------------------------------------------------------------------
@@ -217,11 +193,15 @@ v   = repmat(v, 1, size(r_p, 2));
 %     end
 % end
 
-
+% 
 dC = conditionalcdf(sel_family, r_p, v, theta_rl);
 
 for j = 1:size(r_p, 2)  
-    R_dC(:, j) = cond_rnd(v, dC(:, j), settings.nsamples);
+    try
+        R_dC(:, j) = cond_rnd(v, dC(:, j), settings.nsamples);
+    catch
+        keyboard
+    end
 end
 
 if settings.checkAC == 1 
